@@ -1,0 +1,14 @@
+unsorted_list = [1, 5, 6, 8, 9, 3, 5, 7, 9, 2, 3, 6, 8]
+
+# check each element of list and look to see if it is a 2
+def classical_oracle(input):
+    searched_num = 2
+    if input == searched_num:
+        return True
+    else:
+        return False
+        
+for index, num in enumerate(unsorted_list):
+    if classical_oracle(num) == True:
+        print("Index of searched number: %i"%index)
+        print("Oracle called %i times"%(index+1))
